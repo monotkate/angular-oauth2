@@ -10,7 +10,7 @@ angular.module('oauth2')
       VALIDURL: 'https://www.googleapis.com/oauth2/v3/tokeninfo?access_token=',
       USERURL: 'https://www.googleapis.com/oauth2/v2/userinfo?access_token=',
       SCOPE: 'profile',
-      CLIENTID: '<insert your clientid here>',
+      CLIENTID: '778585169505-qgtpq7h4mhsu0mrqi6q91ufmauh3d4ku.apps.googleusercontent.com',
       REDIRECT: 'http://localhost:8080/MAMP/html5/oauth/',
       TYPE: 'token',
       NONCE: '1234567890123456789'
@@ -53,13 +53,12 @@ angular.module('oauth2')
               });
             }
           } catch(e) {
-            console.log(e);
+            if (win.closed) {
+              $window.clearInterval(poll);
+            }
+            // console.log(e);
           }
         }, 100);
-
-        var timeout = setTimeout(function() {
-          $window.clearInterval(poll);
-        }, 1000)
 
 
         return deferred.promise;
