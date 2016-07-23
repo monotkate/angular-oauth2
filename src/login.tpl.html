@@ -1,0 +1,14 @@
+<div class="center-text" ng-if="!userLoggedIn">
+  <md-button class="md-primary md-raised button" ng-click="login()">
+    Login with Google
+  </md-button>
+</div>
+
+<div class="center-text" ng-if="userLoggedIn">
+  <span> {{globals.name}}</span> now logged in!
+  <div>
+    <md-button class="md-primary md-raised button" ng-click="logout()">
+      Logout
+    </md-button>
+  </div>
+</div>
