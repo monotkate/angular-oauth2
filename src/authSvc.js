@@ -10,7 +10,7 @@ angular.module('oauth2')
       VALIDURL: 'https://www.googleapis.com/oauth2/v3/tokeninfo?access_token=',
       USERURL: 'https://www.googleapis.com/oauth2/v2/userinfo?access_token=',
       SCOPE: 'profile',
-      CLIENTID: '778585169505-qgtpq7h4mhsu0mrqi6q91ufmauh3d4ku.apps.googleusercontent.com',
+      CLIENTID: '<insert ClientID here',
       REDIRECT: 'http://localhost:8080/MAMP/html5/oauth/',
       TYPE: 'token',
       NONCE: '1234567890123456789'
